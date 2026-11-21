@@ -259,7 +259,29 @@ body {
 .skill-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 4px 12px;
+}
+
+.skill-tags .tag {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 3px 0;
+  font-size: 13px;
+  line-height: 1.35;
+  white-space: normal;
+}
+
+.skill-tags .tag:not(:last-child)::after {
+  content: "/";
+  margin-left: 12px;
+  color: #94a3b8;
+}
+
+.skill-tags .tag:hover {
+  background: transparent;
+  border: 0;
+  color: var(--accent);
 }
 
 .tag {
