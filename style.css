@@ -235,16 +235,17 @@ body {
    SKILLS GRID
    ===================== */
 .skills-grid {
-  columns: 3;
-  column-gap: 36px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px 36px;
+  align-items: start;
 }
 
 .skill-category {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  break-inside: avoid;
-  margin-bottom: 28px;
+  min-width: 0;
 }
 
 .skill-cat-label {
@@ -835,7 +836,7 @@ body {
    ===================== */
 @media (max-width: 1100px) {
   .skills-grid {
-    columns: 2;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -891,7 +892,7 @@ body {
 
 @media (max-width: 600px) {
   .skills-grid {
-    columns: 1;
+    grid-template-columns: 1fr;
   }
 
   .projects-grid {
