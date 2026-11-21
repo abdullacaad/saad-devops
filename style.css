@@ -258,24 +258,31 @@ body {
 
 .skill-tags {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4px 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
 }
 
 .skill-tags .tag {
   background: transparent;
   border: 0;
   border-radius: 0;
-  padding: 3px 0;
+  padding: 1px 0 1px 14px;
   font-size: 13px;
   line-height: 1.35;
   white-space: normal;
+  position: relative;
 }
 
-.skill-tags .tag:not(:last-child)::after {
-  content: "/";
-  margin-left: 12px;
-  color: #94a3b8;
+.skill-tags .tag::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 .skill-tags .tag:hover {
